@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><h1>Welcome to Lexi Hotel home page.</h1></title>
+        
+          <title>
+            {% block title%} 
+            {% endblock %}
+
+          </title>
+          
+          <link rel="stylesheet" href="{% static 'mylexi.css' %}">
+          <body  style="background-image: url('{% static "bedroom.jpg"%}');
+           background-repeat: no-repeat; background-size: cover;";
+           >
+
+    </head>
+    <body id="home">
+        <header class="header-menu">
+            <nav>
+              <ul>
+                <li><a href="about">About</a></li>
+                <li><a href='pictures'>Pictures</a></li>
+                <li><a href='rooms'>Rooms</a></li>
+                <li><a href='makereservation'>Make A Reservation</a></li>
+                <li><a href='login'>Login</a></li>
+                
+
+              </ul>
+            </nav>
+        </header>
+
+        <aside>Let us see what happens Let us see what happens Let us see what happens </aside>
+        {% block content %}
+        {% endblock %}
+
+        
+        
+        
+        
+        
+
+    </body>
+
+
+
+</html>

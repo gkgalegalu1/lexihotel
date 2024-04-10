@@ -1,0 +1,17 @@
+Employee registration page.<br><br><br><br>
+<form action="register_employee" method="post">
+    {% csrf_token %}
+
+    First Name: <input type = "text" name="first_name" placeholder="First name"><br><br>
+    Last Name: <input type = "text" name="last_name" placeholder="Last name"><br><br>
+    Username: <input type = "text" name="username" placeholder="username"><br><br>
+    Password: <input type="password" name = "password" placeholder="Password"><br><br>
+    Confirm: <input type="password" name="password2" placeholder="Confirm password"><br><br>
+    Email: <input type="Email" name="email" placeholder="Email"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% for message in messages %}
+
+{{message}}
+{% endfor %}

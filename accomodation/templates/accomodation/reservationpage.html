@@ -1,0 +1,23 @@
+{% extends "accomodation/home.html"%}
+
+{% block title %}
+Make reservation with us today.
+{% endblock %}
+{% block content %}
+The cost of one room is ${{cost}}
+<form action="submit_reservation" method="post">
+    {% csrf_token %}
+    First name <input type="text" name="first_name" placeholder="First name">
+    Last name <input type="text" name="last_name" placeholder="Last name"><br><br>
+    Email <input type="email" name="email" placeholder="email"><br><br>
+    Phone number <input type="phone" name="phone" placeholder="Phone number"><br><br>
+    Arrival date <input type="date" name="arrival_date" required>
+    Numuber of days you want to stay <input type="number" name="num_of_days" required><br><br>
+    Rooms <input type="number" name="rooms"  placeholder="1" required>
+    Adults <input type="number" name="adult" placeholder="1">
+    Kids <input type="number" name="kids" placeholder="Number of kids" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<button type="button"><a href="/lexihotel/">Back</a></button>
+{% endblock %}

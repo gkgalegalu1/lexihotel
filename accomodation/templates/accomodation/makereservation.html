@@ -1,0 +1,19 @@
+<h2>Thank you for reserving in our hotel</h2>
+Mr. {{customer.firstname}}
+{{customer.lastname}} thank you for booking with us.<br> You will be staying for {{customer.number_of_staying_days}} days starting from 
+{{customer.arrival}}.<br> The number of rooms you have booked for is 
+{{customer.rooms}}.<br> Number of adults are {{customer.adults}}; and number of kids are {{customer.kids}}.<br><br>
+Cost of staying per day is ${{customer.cost}}<br><br>
+Total cost will be ${{customer.total_cost}}<br><br>
+
+<!--<button type="input"name="total_cost" value="{{customer.total_cost}}">Do it</button>.
+
+
+<form action="confirm" method="post">
+    {% csrf_token %}
+<button type="input" name="total_cost" value="{{customer.total_cost}}">
+<button type="submit">Confirm</button>
+</form>
+
+<button type="button"><a href="makereservation">Back</a></button>-->
+Would like to make more <button type=button><a href="makereservation">Reservation</a></button>

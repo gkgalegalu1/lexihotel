@@ -1,0 +1,72 @@
+ body {  height: 80%;
+    
+        
+      }
+
+body {
+    background-image:"garden.jpg";
+}
+            
+            body {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 20;
+            }
+            .header-menu,
+            footer {
+              display: flex;
+              align-items: center;
+              width: 100%;
+            }
+            .header-menu {
+              justify-content: flex-end;
+              height: 60px;
+              background: #6670ba;
+              color: #181313;
+              display:inline;
+            }
+            h2 {
+              margin: 0 0 8px;
+            }
+            ul li {
+              display: inline-block;
+              padding: 0 10px;
+              list-style: none;
+              
+            }
+            aside {
+              flex: 0.4;
+              height: 165px;
+              padding-left: 15px;
+              border-left: 1px solid #666;
+            }
+
+            img{
+                width:500;
+                height:600;
+            }
+
+
+
+            .source {
+                text-align:justify;
+            }
+            section {
+              flex: 1;
+              padding-right: 15px;
+            }
+            footer {
+              padding: 0 10px;
+              background: #ccc;
+            }
+
+            .warning{
+                color:red;
+            }
+
+            .pictuers_of_hotel {
+                background-color:aliceblue;
+                display:inline-block;
+                padding:auto;
+            }
+         
