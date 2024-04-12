@@ -3,6 +3,7 @@ from accomodation import views
 
 
 urlpatterns = [
+    path('lexihotel/home1',views.home1, name='home1'),
     path('lexihotel/', views.home, name='home'),
     path('lexihotel/about', views.about, name='about'),
     path('lexihotel/makereservation', views.makereservation, name='makereservation'),

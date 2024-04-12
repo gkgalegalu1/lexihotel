@@ -8,6 +8,10 @@ from django.contrib.auth.models import User, auth
 
 from datetime import date
 
+king = 39.99
+queen = 39.99
+twin = 39.99
+
 def about(request):
     return render(request, 'accomodation/about.html')
 
@@ -33,8 +37,8 @@ def register_employee(request):
                 messages.add_message(request, messages.INFO, "email taken. Please use another email")
                 return redirect('register')
             else:   
-                user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, password=password, email=email)
-                user.save();
+                #user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, password=password, email=email)
+                #user.save();
                 return render(request, 'accomodation/login.html')
                  
         else:
@@ -78,11 +82,14 @@ def check_reservation(request):
 
 def rooms(request):
     #for room in rooms:
-    return render(request, 'accomodation/rooms.html', {'large':74.99, 'medium':49.99, 'small':39.99})
+    return render(request, 'accomodation/rooms.html', {'king':king, 'queen':queen, 'twin':twin})
     
     
 def home(request):
     return render(request, 'accomodation/home.html', {'cost':cost})
+
+def home1(request):
+    return render(request, 'accomodation/home.html')
 
 cost=float(49.99)
 def makereservation(request):
@@ -90,7 +97,8 @@ def makereservation(request):
     return render(request, 'accomodation/reservationpage.html', {'cost':cost})
 
 def calc_price(request, num_days, price_of_a_room, num_of_rooms):
-    price = num_days * price_of_a_room * num_of_rooms
+    price = str(num_days * price_of_a_room * num_of_rooms)
+
     
 
 def submit_reservation(request):
@@ -102,6 +110,7 @@ def submit_reservation(request):
         arrival=request.POST['arrival_date']
         number_of_staying_days=int(request.POST['num_of_days'])
         rooms=int(request.POST['rooms'])
+        
         adults=request.POST['adult']
         kids=request.POST['kids']
         total_cost =  cost * rooms * number_of_staying_days 
@@ -116,6 +125,7 @@ def submit_reservation(request):
                    'arrival':arrival,
                    'number_of_staying_days':number_of_staying_days,
                    'rooms':rooms,
+                   
                    'adults':adults,
                    'kids':kids,
                    'cost':cost,
@@ -131,5 +141,5 @@ def record_payment(request):
         return render(request, 'pay_for_stay.html')
 
 def pictures(request):
-    return render(request, 'accomodation/pictures.html')       
+    return render(request, 'accomodation/pictures.html',{'king':king, 'queen':queen, 'twin':twin})       
         

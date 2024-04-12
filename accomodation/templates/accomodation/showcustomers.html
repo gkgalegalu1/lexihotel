@@ -1,38 +1,45 @@
-<!--{% extends "accomodation/home.html"%}
-
-{% block title %}
-List of clients who have made reservation.
-{% endblock %}
-
-{% block content %}-->
-<button type="button"><a href="logout">Logout</a></button><br>
-<table style="width:100%" border: 1px solid black;>
-    <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Phone number</th>
-        <th>Arrival date</th>
-        <th>Staying days</th>
-        <th>Number of Rooms</th>
-        <th>Adults</th>
-        <th>Kids</th>
-        <th>Paid</th>
-    </tr>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Customers that confirmed their booking </title>
+        
+        <style>
+             table, th, td {
+            border:1px solid gray;
+          }
+        </style>
+    </head>
+    <body>
+        <p id="button"><button type="button"> <a href="logout">Logout</a></button></p>
+        <table >
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone number</th>
+                <th>Arrival date</th>
+                <th>Staying days</th>
+                <th>Number of Rooms</th>
+                <th>Adults</th>
+                <th>Kids</th>
+                <th>Paid</th>
+            </tr>
     
-{%for customer in booking %}
-<tr>
-<td>{{customer.first_name}}</td> 
-<td>{{customer.last_name}}</td> 
-<td>{{customer.phone}}</td>
-<td> {{customer.arrival_date}}</td>
-<td>{{customer.num_of_days}}</td>
-<td> {{customer.number_of_rooms}}</td>
-<td> {{customer.number_of_adults}} </td>
-<td>{{customer.number_of_kids}} </td>
-<td>{{customer.number_of_kids}}</td>
-<td>{{customer.paid}}</td>
-</tr>
-{% endfor %}
+            {%for customer in booking %}
+            <tr>
+                <td>{{customer.first_name}}</td> 
+                <td>{{customer.last_name}}</td> 
+                <td>{{customer.phone}}</td>
+                <td> {{customer.arrival_date}}</td>
+                <td>{{customer.num_of_days}}</td>
+                <td> {{customer.number_of_rooms}}</td>
+                <td> {{customer.number_of_adults}} </td>
+                <td>{{customer.number_of_kids}} </td>
+                <td>{{customer.paid}}</td>
+            </tr>
+            {% endfor %}
     
-</table>
-{% endblock %}
+        </table>
+        <p id="button"><button type="button"> <a href="/lexihotel/">Back</a></button></p>
+    </body>
+</html>

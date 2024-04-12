@@ -1,14 +1,50 @@
-
-Available Beds<br><br>
-
-<button type="button"> <a href="makereservation">King $ {{large}}</a></button> <br><br>
+{% extends "accomodation/home.html"%}
 
 
-<button type="button"> <a href="makereservation">Queen $ {{medium}}</a></button> <br><br>
+<!DOCTYPE html>
+<html>
+    {% load static  %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><h1>Welcome to Lexi Hotel home page.</h1></title>
+        
+          <title>
+           Lex hotel pictures
 
-<button type="button"> <a href="makereservation">Small $ {{small}}</a></button>  <br><br>
+          </title>
+          
+          <link rel="stylesheet" href="{% static 'mylexi.css' %}">
+
+    </head>
+    <body id="home">
+        {% block content%}
+
+        <div class="row">
+            
+                
+                <a href="makereservation"><img src="{% static 'king.jpg'%}" width="500", height="300" alt="picture of king-size bed"> $ {{king}}</a>
+            </div>
+            <div class="column">
+                
+                <a href="makereservation"> <img src="{% static 'queen.jpg'%}" width="500", height="300" alt="picture of queen-size bed">$ {{queen}}</a>
+            </div>
+            <div class="column">
+                
+                <a href="makereservation"> <img src="{% static 'twin-beds.jpg'%}" width="500", height="300" alt="picture of twin-beds bed">$ {{twin}}</a>
+            </div>
+         </div>
+        
+         The pictures are from:<br>
+         https://www.bing.com/images/search?q=free+garden+images+to+download&form=HDRSC4&first=1&cw=1473&ch=742 
+         https://www.bing.com/search?q=bedroom+images&qs=MQT&pq=bed+images&sk=MQT1LS1&sc=10-10&cvid=D1DD1E6E069541FDA440C026F00EBD55&FORM=QBRE&sp=3&lq=0
+         https://www.bing.com/search?q=hotel+pictures+images+and+photos+outside&qs=NW_XFC&pq=hotel+pictures+images+and+photos+ou&sc=10-35&cvid=5235633479D94AC9AA4B2FF95A91A4A8&FORM=QBRE&sp=1&ghc=1&lq=0
+         https://www.bing.com/search?q=hotel+pictures+images+and+photos+outside&qs=NW_XFC&pq=hotel+pictures+images+and+photos+ou&sc=10-35&cvid=5235633479D94AC9AA4B2FF95A91A4A8&FORM=QBRE&sp=1&ghc=1&lq=0
+         https://www.google.com/search?q=pictures+of+twin+size+beds+in+hotels+pictures&sca_esv=4b723428e1eceb0a&sxsrf=ACQVn08CiLIFzUjKtHmCgUu3320tWP8ilg%3A1712839913909&ei=6dwXZo3-NvPr5NoP3fmE6AY&oq=pictures+of+tw+size+beds+in+hotels+pictures&gs_lp=Egxnd3Mtd2l6LXNlcnAiK3BpY3R1cmVzIG9mIHR3IHNpemUgYmVkcyBpbiBob3RlbHMgcGljdHVyZXMqAggAMgoQIRgKGKABGMMEMgoQIRgKGKABGMMESMQ0UKMWWPsYcAF4AZABAJgBX6ABsgGqAQEyuAEByAEA-AEBmAIDoAK-AcICChAAGEcY1gQYsAPCAggQIRigARjDBJgDAIgGAZAGCJIHAzIuMaAHswk&sclient=gws-wiz-serp#vhid=8ynTFNZrgHx3KM&vssid=l
+         </div>
+        <button type="button"><a href="/lexihotel/">Back</a></button>
+        {% endblock %}
+    </body>
 
 
-<button type="button"> <a href="/lexihotel/">Back</a></button>  <br><br>
 
-
+</html>

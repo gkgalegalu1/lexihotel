@@ -11,30 +11,55 @@
             {% endblock %}
 
           </title>
+
           
-          <link rel="stylesheet" href="{% static 'mylexi.css' %}">
+          <link rel="stylesheet" type="text/css" href="{% static 'mylexi.css' %}">
           <body  style="background-image: url('{% static "bedroom.jpg"%}');
            background-repeat: no-repeat; background-size: cover;";
            >
+           <style>
+           img {
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top:30px;
+            width: 100%;
+          }
+        </style>
 
     </head>
     <body id="home">
         <header class="header-menu">
             <nav>
               <ul>
+                <li><a href="home1">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href='pictures'>Pictures</a></li>
                 <li><a href='rooms'>Rooms</a></li>
                 <li><a href='makereservation'>Make A Reservation</a></li>
-                <li><a href='login'>Login</a></li>
-                
-
               </ul>
             </nav>
         </header>
 
-        <aside>Let us see what happens Let us see what happens Let us see what happens </aside>
         {% block content %}
+        <p >Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+          Booking at our hotel makes you feel happy and amaizing. We give you service that stays in memory.
+        </p>
+        
+          <span class:"img">
+              <img src="{% static 'garden.jpg' %}" width="200", height="300" alt="picture of garden">
+              <img src="{% static 'hotel.jpg'%}" width="200", height="300" alt="picture of garden">
+        </span>
+       
+        <p><div class="login">click here if you are <a href='login'>employee</a></div>
         {% endblock %}
 
         

@@ -1,14 +1,27 @@
 {% extends "accomodation/home.html"%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About the application</title>
+    </head>
+    <body>
 
-{% block title %}
-About the application
-{% endblock %}
+    {% block title %}
+    About the application
+    {% endblock %}
 
-{% block content%}
-<p>This application is built for the purpose of showing Kedir G. Gamada's skill of building website to potential employers.</p>
-<h3 class="warning">WARNING!
-<p> As this application is not real please do not put any credit card number or any sensitive personal data. 
-The builder will not be responsible for any harm that one may get by entering personal sesitive data. 
-Thank you </p></h3> 
-<p><button type="button"> <a href="/lexihotel/">Back</a></button></p>
-{% endblock %}
+    {% block content%}
+    <div>
+    <h3>This application is built for the purpose of showing Kedir G. Gamada's skill of building website to potential employers.</h3>
+    <h3 style="color: red; font-size: 26px;">WARNING!
+    <p> As this application is not real please do not put any sensitive personal data. 
+        The builder will not be responsible for any harm that one may get by entering personal sesitive data. 
+        Thank you </p>
+    </h3>
+    </div>
+
+        <!--<button type="button"><a href="/lexihotel/">Back</a></button>-->
+    {% endblock %}
+    
+</body>
+</html>

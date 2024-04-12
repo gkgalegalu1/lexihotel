@@ -82,6 +82,17 @@ DATABASES = {
     }
 }
 
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kedirdatabase',
+        'USER': 'kedir',
+        'PASSWORD': 'NahomeEmu1',
+        'HOST': 'kedirdatabase.cf8euwe626lw.us-east-1.rds.amazonaws.com',
+        'PORT': '5431'
+    }
+}'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
